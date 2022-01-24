@@ -9,6 +9,7 @@ ${url}    https://computer-database.gatling.io/computers/new
 DropDown Testing
     open browser    ${url}    ${browser}
     maximize browser window
+    set selenium speed    3 seconds
     input text    xpath://input[@id='name']    Unaco
     input text    id:introduced    2022-01-01
     click element    //select[@id='company']
