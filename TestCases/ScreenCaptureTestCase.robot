@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    Screenshot
 
 *** Test Cases ***
 Navigation Testing
@@ -14,13 +15,8 @@ Navigation Testing
     ${loc}=    get location
     log to console    ${loc}
 
-    go to    https://www.yahoo.com/
-    ${loc}=    get location
-    log to console    ${loc}
-
-    go back
-    go back
-    ${loc}=    get location
-    log to console    ${loc}
+    capture element screenshot    sb_form    ./Screenshot/Bing-bar.png
+#    capture page screenshot    D:/Project for my practice/TestProject/Screenshot/Bing.png
+#    take screenshot    D:/Project for my practice/TestProject/Screenshot/Bing.png
 
     close browser
