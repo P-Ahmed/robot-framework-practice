@@ -1,97 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.0 on win32)" generated="20220128 14:27:37.218" rpa="false" schemaversion="2">
-<suite id="s1" name="MouseClickTestCase" source="D:\Project for my practice\TestProject\TestCases\MouseClickTestCase.robot">
-<test id="s1-t1" name="Right CLick">
+<robot generator="Robot 4.1.3 (Python 3.10.0 on win32)" generated="20220128 15:58:49.463" rpa="false" schemaversion="2">
+<suite id="s1" name="UserDefinedKeywords" source="D:\Project for my practice\TestProject\TestCases\UserDefinedKeywords.robot">
+<test id="s1-t1" name="LoginTest">
+<kw name="LaunchBrowser">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://swisnl.github.io/jQuery-contextMenu/demo.html</arg>
-<arg>chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220128 14:27:37.482" level="INFO">Opening browser 'chrome' to base url 'https://swisnl.github.io/jQuery-contextMenu/demo.html'.</msg>
-<status status="PASS" starttime="20220128 14:27:37.482" endtime="20220128 14:27:40.909"/>
+<msg timestamp="20220128 15:58:49.705" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220128 15:58:49.705" endtime="20220128 15:58:51.675"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220128 14:27:40.910" endtime="20220128 14:27:41.066"/>
+<status status="PASS" starttime="20220128 15:58:49.705" endtime="20220128 15:58:51.675"/>
 </kw>
-<kw name="Open Context Menu" library="SeleniumLibrary">
-<arg>xpath=//span[contains(text(),'right click me')]</arg>
-<doc>Opens the context menu on the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220128 14:27:41.067" endtime="20220128 14:27:41.379"/>
+<kw name="LoginToTheApplication">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Sign in')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220128 15:58:51.676" level="INFO">Clicking link 'xpath://a[contains(text(),'Sign in')]'.</msg>
+<msg timestamp="20220128 15:58:51.789" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220128 15:58:51.791" level="FAIL">Link with locator 'xpath://a[contains(text(),'Sign in')]' not found.</msg>
+<status status="FAIL" starttime="20220128 15:58:51.676" endtime="20220128 15:58:51.791"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220128 14:27:43.385" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220128 14:27:41.380" endtime="20220128 14:27:43.385"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>test996162@grr.la</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220128 15:58:51.791" endtime="20220128 15:58:51.791"/>
 </kw>
-<status status="PASS" starttime="20220128 14:27:37.481" endtime="20220128 14:27:43.386"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:passwd</arg>
+<arg>P@ssword123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220128 15:58:51.791" endtime="20220128 15:58:51.791"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name:SubmitLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220128 15:58:51.792" endtime="20220128 15:58:51.792"/>
+</kw>
+<status status="FAIL" starttime="20220128 15:58:51.675" endtime="20220128 15:58:51.792"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20220128 15:58:51.792" endtime="20220128 15:58:51.793"/>
+</kw>
+<status status="FAIL" starttime="20220128 15:58:49.704" endtime="20220128 15:58:51.793">Link with locator 'xpath://a[contains(text(),'Sign in')]' not found.</status>
 </test>
-<test id="s1-t2" name="Double Click">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://testautomationpractice.blogspot.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220128 14:27:43.390" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
-<status status="PASS" starttime="20220128 14:27:43.389" endtime="20220128 14:27:49.273"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220128 14:27:49.274" endtime="20220128 14:27:49.411"/>
-</kw>
-<kw name="Double Click Element" library="SeleniumLibrary">
-<arg>xpath=//button[contains(text(),'Copy Text')]</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<msg timestamp="20220128 14:27:49.413" level="INFO">Double clicking element 'xpath=//button[contains(text(),'Copy Text')]'.</msg>
-<status status="PASS" starttime="20220128 14:27:49.412" endtime="20220128 14:27:49.717"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220128 14:27:51.733" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220128 14:27:49.718" endtime="20220128 14:27:51.733"/>
-</kw>
-<status status="PASS" starttime="20220128 14:27:43.388" endtime="20220128 14:27:51.734"/>
-</test>
-<test id="s1-t3" name="Drag and Drop">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://testautomationpractice.blogspot.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220128 14:27:51.738" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
-<status status="PASS" starttime="20220128 14:27:51.737" endtime="20220128 14:27:58.072"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220128 14:27:58.074" endtime="20220128 14:27:58.215"/>
-</kw>
-<kw name="Drag And Drop" library="SeleniumLibrary">
-<arg>draggable</arg>
-<arg>droppable</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" starttime="20220128 14:27:58.216" endtime="20220128 14:27:58.835"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220128 14:28:00.842" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220128 14:27:58.836" endtime="20220128 14:28:00.842"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220128 14:28:00.843" endtime="20220128 14:28:07.316"/>
-</kw>
-<status status="PASS" starttime="20220128 14:27:51.736" endtime="20220128 14:28:07.317"/>
-</test>
-<status status="PASS" starttime="20220128 14:27:37.220" endtime="20220128 14:28:07.319"/>
+<status status="FAIL" starttime="20220128 15:58:49.464" endtime="20220128 15:58:51.795"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="MouseClickTestCase">MouseClickTestCase</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="UserDefinedKeywords">UserDefinedKeywords</stat>
 </suite>
 </statistics>
 <errors>
