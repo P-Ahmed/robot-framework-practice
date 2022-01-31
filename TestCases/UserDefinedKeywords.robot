@@ -11,7 +11,7 @@ LoginTest
     # create webdriver    chrome    executable_path="D:\Software\For Robot Framework\chromedriver.exe"
     LaunchBrowser
     LoginToTheApplication
-    close browser
+    close all browsers
 
 
 
